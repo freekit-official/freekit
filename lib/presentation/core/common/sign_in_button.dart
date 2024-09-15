@@ -1,0 +1,42 @@
+import 'package:flutter/material.dart';
+import 'package:freekit/presentation/core/constants/constants.dart';
+
+class SignInButton extends StatelessWidget {
+  const SignInButton(
+      {super.key,
+      required this.text,
+      required this.background,
+      required this.foreground,
+      required this.padding});
+  final String text;
+  final Color background;
+  final Color foreground;
+  final double padding;
+  @override
+  Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+    return Container(
+      padding: EdgeInsets.symmetric(horizontal: padding),
+      width: size.width,
+      height: 50,
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+          ),
+          backgroundColor: background,
+          foregroundColor: foreground,
+        ),
+        onPressed: () {},
+        child: Text(
+          text,
+          style: const TextStyle(
+            fontFamily: 'Sora',
+            fontWeight: FontWeight.w500,
+            fontSize: 16,
+          ),
+        ),
+      ),
+    );
+  }
+}
