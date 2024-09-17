@@ -19,6 +19,7 @@ class FreeKit extends StatelessWidget {
       home: const ResponsiveAuthenticationPage(),
       themeMode: ThemeMode.system,
       theme: Palete.lightTheme,
+      debugShowCheckedModeBanner: false,
     );
   }
 }

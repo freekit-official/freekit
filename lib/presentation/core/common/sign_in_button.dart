@@ -6,11 +6,13 @@ class SignInButton extends StatelessWidget {
       required this.text,
       required this.background,
       required this.foreground,
-      required this.padding});
+      required this.padding,
+      required this.onPressed});
   final String text;
   final Color background;
   final Color foreground;
   final double padding;
+  final VoidCallback onPressed;
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -26,7 +28,7 @@ class SignInButton extends StatelessWidget {
           backgroundColor: background,
           foregroundColor: foreground,
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           text,
           style: const TextStyle(

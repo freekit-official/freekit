@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:freekit/presentation/Pages/DeskTop/Pages/features/authentication/pages/desktop_signup_page.dart';
 import 'package:freekit/presentation/core/common/sign_in_button.dart';
 import 'package:freekit/presentation/core/common/text_bar_widget.dart';
 import 'package:freekit/presentation/core/constants/constants.dart';
 
-class DesktopLoginPage extends StatelessWidget {
-  const DesktopLoginPage({super.key});
+class DesktopSignupPage extends StatelessWidget {
+  const DesktopSignupPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -57,7 +56,7 @@ class DesktopLoginPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   const Text(
-                    'Log In to FreeKit',
+                    'SignUp to FreeKit',
                     style: TextStyle(
                       fontFamily: 'Sora',
                       fontSize: 27,
@@ -66,6 +65,11 @@ class DesktopLoginPage extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 21,
+                  ),
+                  const TextBarWidget(
+                    hint: 'Username',
+                    isObscure: false,
+                    size: double.maxFinite,
                   ),
                   const TextBarWidget(
                     hint: 'username@gmail.com',
@@ -77,8 +81,11 @@ class DesktopLoginPage extends StatelessWidget {
                     isObscure: true,
                     size: double.maxFinite,
                   ),
+                  const SizedBox(
+                    height: 5,
+                  ),
                   SignInButton(
-                    text: 'Log In',
+                    text: 'Sign Up',
                     background: kBlue,
                     foreground: kWhite,
                     padding: 7,
@@ -86,17 +93,6 @@ class DesktopLoginPage extends StatelessWidget {
                   ),
                   const SizedBox(
                     height: 14,
-                  ),
-                  const Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      color: kBlue,
-                      fontWeight: FontWeight.w500,
-                      fontFamily: 'Sora',
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 12,
                   ),
                   const Divider(
                     color: Colors.grey,
@@ -106,7 +102,7 @@ class DesktopLoginPage extends StatelessWidget {
                     height: 5,
                   ),
                   SignInButton(
-                    text: 'Create new account',
+                    text: 'Log In',
                     background: Colors.green,
                     foreground: kWhite,
                     padding: 7,
